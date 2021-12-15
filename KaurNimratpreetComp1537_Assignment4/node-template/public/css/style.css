@@ -1,0 +1,82 @@
+
+@import url(https://fonts.googleapis.com/css?family=Hind);
+
+html, body {
+  background-image: url('/img/water-1330252_1920.jpg');
+  margin: 0em;
+  padding: 1em;
+  
+}
+
+body {
+  font-family: "Hind";
+  font-size: 18pt;
+  display:grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 5% 10% 25% 30%;
+  
+  
+}
+#click4population{
+  grid-row-start: 1;
+  grid-row-end: 1; 
+  display: block;
+  border-style: double;
+  width: 10%;
+  text-decoration: none;
+ 
+  
+  color:black;
+  background-color: aquamarine;
+}
+#headings{
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+#images{
+  grid-row-start: 3;
+  grid-row-end:3;
+  display:grid;
+  grid-template-columns: 5% 40% 40% 5%;
+  grid-template-rows: 100%;
+  grid-gap: 5%;
+}
+#image1{
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+#image2{
+  grid-column-start: 3;
+  grid-column-end: 3;
+}
+
+img{
+  width: 100%;
+  height: 50%;
+}
+#table1{
+  border-style: solid;
+  width: 100%;
+  padding: 2%;
+  background-color: antiquewhite;
+  grid-row-start: 4;
+  grid-row-end: 4;
+}
+#table1 th{
+  border-style: inset;
+  background-color: aqua;
+  
+}
+#table1 td{
+  border-style: inset;
+ 
+}
+#table1 td:hover{
+  background-color: grey;
+}
+#headings{
+  text-align: center;
+  color:brown
+}
+
+
