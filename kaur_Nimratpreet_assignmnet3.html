@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Giving</title>
+    <style>
+        body {
+            border-style: solid;
+            border-width: 1em;
+        }
+        
+        .abc {
+            display: grid;
+            grid-auto-flow: column;
+            grid-gap: 1.5em;
+            padding: 10px;
+            border-style: solid;
+            grid-template-columns: 40% 5% 25% 27%;
+            grid-template-rows: 100%;
+        }
+        
+        #logo {
+            color: black;
+            font-size: 200%;
+            font-weight: 100;
+        }
+        
+        #logo img {
+            border-radius: 60%;
+            float: left;
+            width: 20%;
+            height: 20%;
+            margin-right: 10%;
+        }
+        
+        #hello {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-auto-flow: column;
+        }
+        
+        #hello3 {
+            display: block;
+            color: black;
+            border-style: dashed;
+            padding: 20px;
+            letter-spacing: 1px;
+            font-size: 18px;
+            font-weight: 400;
+            margin-left: 20px;
+            float: left;
+            text-decoration: none;
+        }
+        
+        #hello4 {
+            display: block;
+            color: black;
+            border-style: dashed;
+            padding: 20px;
+            letter-spacing: 1px;
+            font-size: 18px;
+            font-weight: 400;
+            margin-left: 20px;
+            float: left;
+            text-decoration: none;
+        }
+        
+        #hello1 {
+            grid-column-start: 4;
+            grid-column-end: 4;
+        }
+        
+        #hello5 {
+            display: block;
+            color: black;
+            border-style: dashed;
+            padding: 20px;
+            letter-spacing: 1px;
+            font-size: 18px;
+            font-weight: 400;
+            float: left;
+            text-decoration: none;
+        }
+        
+        #hello6 {
+            display: block;
+            color: black;
+            border-style: dashed;
+            padding: 20px;
+            letter-spacing: 1px;
+            font-size: 18px;
+            font-weight: 400;
+            float: left;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+        
+        .header {
+            margin-top: 10px;
+            font-size: 70px;
+            text-align: center;
+            font-weight: 800;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 5%;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 10% 20% 20% 20% 20% 10%;
+            grid-template-rows: repeat(1, 300px);
+        }
+        
+        #new {
+            grid-column-start: 2;
+            grid-column-end: 2;
+        }
+        
+        #new img {
+            border-radius: 50%;
+        }
+        
+        #support {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            margin-left: 30px;
+        }
+        
+        #support img {
+            border-radius: 50%;
+        }
+        
+        #design {
+            grid-column-start: 4;
+            grid-column-end: 4;
+            margin-left: 30px;
+        }
+        
+        #design img {
+            border-radius: 50%;
+        }
+        
+        #learn {
+            grid-column-start: 5;
+            grid-column-end: 5;
+            margin-left: 30px;
+        }
+        
+        #learn img {
+            border-radius: 50%;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 22%);
+            grid-template-rows: repeat(2, 50%);
+            grid-gap: 50px;
+        }
+        
+        .grid img {
+            width: 100%;
+            height: 90%;
+        }
+        
+        #img1 {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 1;
+        }
+        
+        #img2 {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 1;
+        }
+        
+        #img3 {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+        
+        #img4 {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+        
+        #contact {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            border-style: dashed;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 40% 60%;
+        }
+        
+        #how {
+            grid-row-start: 1;
+            grid-row-end: 1;
+        }
+        
+        #how1 {
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+        
+        #contact h1 {
+            text-decoration: underline;
+            text-align: center;
+            font-size: 90%;
+        }
+        
+        .button1 {
+            margin-top: 2pt;
+            background-color: cadetblue;
+            border-style: solid;
+            border-width: 4px;
+            color: black;
+            padding: 5px;
+            text-align: center;
+            display: block;
+            cursor: pointer;
+            font-size: 50%;
+            text-align: center;
+            float: right;
+        }
+        
+        #contact p {
+            font-size: 20px;
+            font-weight: 300;
+            text-align: left;
+            margin-top: 7%;
+        }
+        
+        #contact img {
+            float: left;
+            width: 50%;
+            height: 100px;
+        }
+        
+        #donate {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 2;
+            border-style: dotted;
+            border-width: 4px;
+        }
+        
+        #donate img {
+            width: 100%;
+            height: 30%;
+            border-radius: 50%;
+        }
+        
+        #button {
+            background-color: cadetblue;
+            border-style: solid;
+            border-width: 4px;
+            color: black;
+            padding: 15px;
+            text-align: center;
+            display: block;
+            cursor: pointer;
+            font-size: 15px;
+            margin-top: 30px;
+        }
+        
+        #donate p {
+            font-size: 2em;
+            text-align: center;
+            text-decoration: solid;
+            padding: 1em;
+        }
+        
+        .info {
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-style: oblique;
+            text-align: left;
+        }
+        
+        #heading {
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 2;
+            font-size: 70px;
+            font-weight: 900;
+            text-align: center;
+            color: blue;
+        }
+        
+        #event1 {
+            margin-top: 40px;
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 2;
+            font-size: 2em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+        }
+        
+        #event1 img {
+            float: left;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .footer {
+            font-size: 3em;
+            font-weight: 900;
+            text-align: left;
+            text-decoration: underline;
+        }
+        
+        footer a {
+            font-size: 1em;
+            text-decoration: wavy;
+        }
+        
+        @media screen and (min-width:1281px) and (max-width:1480px) {
+            body {
+                border-style: solid;
+                border-width: 1em;
+            }
+            .abc {
+                display: grid;
+                grid-auto-flow: column;
+                grid-gap: 1.5em;
+                padding: 10px;
+                border-style: solid;
+                grid-template-columns: 40% 30% 30%;
+                grid-template-rows: 100%;
+            }
+            #logo {
+                color: black;
+                font-size: 40px;
+                font-weight: 100;
+            }
+            #logo img {
+                border-radius: 60%;
+                float: left;
+                width: 20%;
+                height: 20%;
+                margin-right: 10px;
+                margin-top: 40px;
+            }
+            #hello {
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-auto-flow: column;
+            }
+            #hello3 {
+                display: block;
+                color: black;
+                border-style: dashed;
+                padding: 20px;
+                letter-spacing: 1px;
+                font-size: 18px;
+                font-weight: 400;
+                float: left;
+                text-decoration: none;
+            }
+            #hello4 {
+                display: block;
+                color: black;
+                border-style: dashed;
+                padding: 20px;
+                letter-spacing: 1px;
+                font-size: 18px;
+                font-weight: 400;
+                float: left;
+                text-decoration: none;
+            }
+            #hello1 {
+                grid-column-start: 3;
+                grid-column-end: 3;
+            }
+            #hello5 {
+                display: block;
+                color: black;
+                border-style: dashed;
+                padding: 20px;
+                letter-spacing: 1px;
+                font-size: 18px;
+                font-weight: 400;
+                float: left;
+                text-decoration: none;
+            }
+            #hello6 {
+                display: block;
+                color: black;
+                border-style: dashed;
+                padding: 20px;
+                letter-spacing: 1px;
+                font-size: 18px;
+                font-weight: 400;
+                float: left;
+                text-decoration: none;
+            }
+            .header {
+                margin-top: 10px;
+                font-size: 40px;
+                text-align: center;
+                font-weight: 800;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                padding: 5%;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: 10% 20% 20% 20% 20% 10%;
+                grid-template-rows: repeat(1, 300px);
+            }
+            #new {
+                grid-column-start: 2;
+                grid-column-end: 2;
+            }
+            #new img {
+                border-radius: 50%;
+            }
+            #support {
+                grid-column-start: 3;
+                grid-column-end: 3;
+                margin-left: 30px;
+            }
+            #support img {
+                border-radius: 50%;
+            }
+            #design {
+                grid-column-start: 4;
+                grid-column-end: 4;
+                margin-left: 30px;
+            }
+            #design img {
+                border-radius: 50%;
+            }
+            #learn {
+                grid-column-start: 5;
+                grid-column-end: 5;
+                margin-left: 30px;
+            }
+            #learn img {
+                border-radius: 50%;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3, 30%);
+                grid-template-rows: repeat(3, 600px);
+                grid-gap: 50px;
+            }
+            .grid img {
+                width: 100%;
+                height: 90%;
+            }
+            #img1 {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 1;
+                grid-row-end: 1;
+            }
+            #img2 {
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 1;
+            }
+            #img3 {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 2;
+                grid-row-end: 2;
+            }
+            #img4 {
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row-start: 2;
+                grid-row-end: 2;
+            }
+            #contact {
+                grid-column-start: 3;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 1;
+                border-style: dashed;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 50% 50%;
+            }
+            #how {
+                grid-row-start: 1;
+                grid-row-end: 1;
+            }
+            #how1 {
+                grid-row-start: 2;
+                grid-row-end: 2;
+            }
+            #contact h1 {
+                text-decoration: underline;
+                text-align: center;
+                font-size: 90%;
+            }
+            .button1 {
+                margin-top: 2pt;
+                background-color: cadetblue;
+                border-style: solid;
+                border-width: 4px;
+                color: black;
+                padding: 5px;
+                text-align: center;
+                display: block;
+                cursor: pointer;
+                font-size: 10px;
+                margin-top: 4px;
+                text-align: center;
+            }
+            #contact p {
+                margin-top: 7%;
+                font-size: 20px;
+                font-weight: 300;
+                text-align: left;
+            }
+            #contact img {
+                float: left;
+                width: 50%;
+                height: 100px;
+            }
+            #donate {
+                grid-column-start: 3;
+                grid-column-end: 3;
+                grid-row-start: 2;
+                grid-row-end: 2;
+                border-style: dotted;
+                border-width: 4px;
+            }
+            #donate img {
+                width: 100%;
+                height: 30%;
+                border-radius: 50%;
+            }
+            #button {
+                background-color: cadetblue;
+                border-style: solid;
+                border-width: 4px;
+                color: black;
+                padding: 15px;
+                text-align: center;
+                display: block;
+                cursor: pointer;
+                font-size: 15px;
+                margin-top: 30px;
+            }
+            #donate p {
+                font-size: 2em;
+                text-align: center;
+                text-decoration: solid;
+                padding: 1em;
+            }
+            .info {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 3;
+                grid-row-end: 3;
+                font-size: 30px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-style: oblique;
+                text-align: left;
+            }
+            #heading {
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row-start: 3;
+                grid-row-end: 3;
+                font-size: 70px;
+                font-weight: 900;
+                text-align: center;
+                color: blue;
+            }
+            #event1 {
+                margin-top: 40px;
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row-start: 3;
+                grid-row-end: 3;
+                font-size: 2em;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bolder;
+            }
+            #event1 img {
+                float: left;
+                width: 40px;
+                height: 40px;
+            }
+            .footer {
+                font-size: 3em;
+                font-weight: 900;
+                text-align: left;
+                text-decoration: underline;
+            }
+            footer a {
+                font-size: 1em;
+                text-decoration: wavy;
+            }
+        }
+        
+        @media screen and (min-width: 702px) and (max-width: 1280px) {
+            body {
+                border-style: solid;
+                border-width: 1em;
+            }
+            .abc {
+                display: grid;
+                grid-auto-flow: column;
+                padding: 3%;
+                grid-template-columns: 35% 30% 30%;
+                grid-template-rows: 50% 50%;
+                border-style: none;
+            }
+            #logo {
+                display: grid;
+                color: black;
+                font-size: 170%;
+                font-weight: 100;
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+            #pizza1 img {
+                border-radius: 50%;
+                width: 60%;
+                height: 60%;
+                margin-bottom: 15%;
+                margin-left: 5%;
+            }
+            #pizza1 {
+                grid-row-start: 1;
+                grid-row-end: 1;
+            }
+            #pizza {
+                grid-row-start: 2;
+                grid-row-end: 2;
+                border-style: inset;
+                padding: 2%
+            }
+            #hello {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-auto-flow: column;
+                grid-row-start: 1;
+                grid-row-end: 1;
+            }
+            #hello3 {
+                display: block;
+                color: black;
+                border-style: dashed;
+                padding: 5%;
+                letter-spacing: 1px;
+                font-size: 70%;
+                font-weight: 400;
+                float: left;
+                text-decoration: none;
+            }
+            #hello4 {
+                display: block;
+                color: black;
+                border-style: dashed;
+                padding: 5%;
+                letter-spacing: 1px;
+                font-size: 70%;
+                font-weight: 400;
+                float: left;
+                text-decoration: none;
+            }
+            #hello1 {
+                grid-column-start: 3;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 1;
+            }
+            #hello5 {
+                display: block;
+                color: black;
+                border-style: dashed;
+                padding: 5%;
+                letter-spacing: 1px;
+                font-size: 70%;
+                font-weight: 400;
+                float: left;
+                text-decoration: none;
+            }
+            #hello6 {
+                display: block;
+                color: black;
+                border-style: dashed;
+                padding: 5%;
+                letter-spacing: 1px;
+                font-size: 70%;
+                font-weight: 400;
+                float: left;
+                text-decoration: none;
+            }
+            .header {
+                font-size: 200%;
+                text-align: center;
+                font-weight: 800;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                padding: 5%;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: 10% 20% 20% 20% 20% 10%;
+                grid-template-rows: repeat(1, 100%);
+                margin-bottom: 10%;
+            }
+            #new {
+                grid-column-start: 2;
+                grid-column-end: 2;
+            }
+            #new img {
+                border-radius: 50%;
+                width: 80%;
+                height: 80%;
+            }
+            #support {
+                grid-column-start: 3;
+                grid-column-end: 3;
+            }
+            #support img {
+                border-radius: 50%;
+                width: 80%;
+                height: 80%;
+            }
+            #design {
+                grid-column-start: 4;
+                grid-column-end: 4;
+            }
+            #design img {
+                border-radius: 50%;
+                width: 80%;
+                height: 80%;
+            }
+            #learn {
+                grid-column-start: 5;
+                grid-column-end: 5;
+            }
+            #learn img {
+                border-radius: 50%;
+                width: 80%;
+                height: 80%;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: repeat(4, 25%);
+            }
+            .grid img {
+                width: 90%;
+                height: 90%;
+            }
+            #img1 {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 1;
+                grid-row-end: 1;
+                width: 80%;
+            }
+            #img2 {
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 1;
+                width: 80%;
+            }
+            #img3 {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 2;
+                grid-row-end: 2;
+                width: 80%;
+            }
+            #img4 {
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row-start: 2;
+                grid-row-end: 2;
+                width: 80%;
+            }
+            #contact {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 3;
+                grid-row-end: 3;
+                border-style: dashed;
+                width: 90%;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 50% 50%;
+            }
+            #how {
+                grid-row-start: 1;
+                grid-row-end: 1;
+            }
+            #how1 {
+                grid-row-start: 2;
+                grid-row-end: 2;
+            }
+            #contact h1 {
+                text-decoration: underline;
+                text-align: center;
+                font-size: 100%;
+            }
+            .button1 {
+                margin-top: 2pt;
+                background-color: cadetblue;
+                border-style: solid;
+                border-width: 2px;
+                color: black;
+                padding: 2px;
+                text-align: center;
+                display: block;
+                cursor: pointer;
+                font-size: 20%;
+                margin-top: 2px;
+                text-align: center;
+            }
+            #contact p {
+                font-size: 77%;
+                font-weight: 300;
+                text-align: left;
+            }
+            #contact img {
+                float: left;
+                width: 20%;
+                height: 10%;
+            }
+            #donate {
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row-start: 3;
+                grid-row-end: 3;
+                border-style: dotted;
+                border-width: 4px;
+                width: 80%;
+            }
+            #donate img {
+                width: 100%;
+                height: 30%;
+                border-radius: 50%;
+            }
+            #button {
+                background-color: cadetblue;
+                border-style: solid;
+                border-width: 2px;
+                color: black;
+                padding: 3px;
+                text-align: center;
+                display: block;
+                cursor: pointer;
+                font-size: 10px;
+            }
+            #donate p {
+                font-size: 100%;
+                text-align: center;
+                text-decoration: solid;
+                padding: 1em;
+            }
+            .info {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 4;
+                grid-row-end: 4;
+                font-size: 90%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-style: oblique;
+                text-align: left;
+            }
+            #heading {
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row-start: 4;
+                grid-row-end: 4;
+                font-size: 120%;
+                font-weight: 900;
+                text-align: center;
+                color: blue;
+            }
+            #event1 {
+                margin-top: 10px;
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row-start: 4;
+                grid-row-end: 4;
+                font-size: 115%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bolder;
+            }
+            #event1 img {
+                float: left;
+                width: 30px;
+                height: 30px;
+            }
+            .footer {
+                font-size: 100%;
+                font-weight: 500;
+                text-align: left;
+                text-decoration: underline;
+            }
+            footer a {
+                font-size: 80%;
+                text-decoration: wavy;
+            }
+        }
+        
+        @media screen and (max-width: 700px) {
+            .abc {
+                display: grid;
+                grid-auto-flow: column;
+                grid-gap: 1.5em;
+                padding: 10px;
+                border-style: solid;
+                grid-template-columns: 100%;
+                grid-template-rows: 50% 50%;
+                border-style: none;
+            }
+            #logo {
+                color: brown;
+                font-size: 50px;
+                font-weight: 100;
+                text-align: center;
+                border-style: inset;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 50% 50%;
+            }
+            #pizza1 img {
+                grid-row-start: 1;
+                grid-row-end: 1;
+                border-radius: 50%;
+                width: 50%;
+                height: 80%;
+                margin-left: 25%;
+            }
+            #pizza1 {
+                grid-row-start: 1;
+                grid-row-end: 1;
+            }
+            #pizza {
+                grid-row-start: 2;
+                grid-row-end: 2;
+            }
+            #hello {
+                grid-row-start: 2;
+                grid-column-end: 2;
+                grid-column-end: 1;
+                grid-column-start: 1;
+                grid-auto-flow: column;
+                margin-top: 50px;
+            }
+            #hello3 {
+                display: block;
+                color: black;
+                border-style: dashed;
+                padding: 5px;
+                letter-spacing: 1px;
+                font-size: 30%;
+                font-weight: 200;
+                float: left;
+                text-decoration: none;
+            }
+            #hello4 {
+                display: block;
+                color: black;
+                border-style: dashed;
+                padding: 5px;
+                letter-spacing: 1px;
+                font-size: 30%;
+                font-weight: 200;
+                float: left;
+                text-decoration: none;
+            }
+            #hello1 {
+                grid-row-start: 2;
+                grid-row-end: 2;
+                grid-column-end: 1;
+                grid-column-start: 1;
+                margin-left: 280px;
+                margin-top: 50px;
+            }
+            #hello5 {
+                display: block;
+                color: black;
+                border-style: dashed;
+                padding: 5px;
+                letter-spacing: 1px;
+                font-size: 30%;
+                font-weight: 200;
+                float: left;
+                text-decoration: none;
+            }
+            #hello6 {
+                display: block;
+                color: black;
+                border-style: dashed;
+                padding: 5px;
+                letter-spacing: 1px;
+                font-size: 8px;
+                font-weight: 200;
+                float: left;
+                text-decoration: none;
+            }
+            .header {
+                margin-top: 10px;
+                font-size: 40px;
+                text-align: center;
+                font-weight: 400;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                padding: 5%;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: 10% 40% 40% 10%;
+                grid-template-rows: repeat(2, 50%);
+            }
+            #new {
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 1;
+            }
+            #new img {
+                border-radius: 50%;
+                width: 60%;
+                height: 50%;
+            }
+            #support {
+                grid-column-start: 3;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 1;
+            }
+            #support img {
+                border-radius: 50%;
+                width: 70%;
+                height: 60%;
+            }
+            #design {
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row-start: 2;
+                grid-row-end: 2;
+                margin-left: -3%;
+            }
+            #design img {
+                border-radius: 50%;
+                width: 60%;
+                height: 60%;
+            }
+            #learn {
+                grid-column-start: 3;
+                grid-column-end: 3;
+                grid-row-start: 2;
+                grid-row-end: 2;
+            }
+            #learn img {
+                border-radius: 50%;
+                width: 70%;
+                height: 60%;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(8, 11%);
+            }
+            .grid img {
+                width: 100%;
+                height: 80%;
+            }
+            #img1 {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 1;
+                grid-row-end: 1;
+                width: 100%;
+            }
+            #img2 {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 2;
+                grid-row-end: 2;
+                width: 100%;
+            }
+            #img3 {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 3;
+                grid-row-end: 3;
+                width: 100%;
+            }
+            #img4 {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 4;
+                grid-row-end: 4;
+                width: 100%;
+            }
+            #contact {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 5;
+                grid-row-end: 5;
+                border-style: dashed;
+                width: 90%;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 50% 50%;
+            }
+            #how {
+                grid-row-start: 1;
+                grid-row-end: 1;
+            }
+            #how1 {
+                grid-row-start: 2;
+                grid-row-end: 2;
+            }
+            #contact h1 {
+                text-decoration: underline;
+                text-align: center;
+                font-size: 18px;
+            }
+            .button1 {
+                margin-top: 2pt;
+                background-color: cadetblue;
+                border-style: solid;
+                border-width: 4px;
+                color: black;
+                padding: 5px;
+                text-align: center;
+                display: block;
+                cursor: pointer;
+                font-size: 10px;
+                margin-top: 4px;
+                text-align: center;
+            }
+            #contact p {
+                font-size: 15px;
+                font-weight: 300;
+                text-align: left;
+                margin-top: 7%;
+            }
+            #contact img {
+                float: left;
+                width: 50%;
+                height: 100px;
+            }
+            #donate {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 6;
+                grid-row-end: 6;
+                border-style: dotted;
+                border-width: 4px;
+                width: 80%;
+            }
+            #donate img {
+                width: 100%;
+                height: 30%;
+                border-radius: 50%;
+            }
+            #button {
+                background-color: cadetblue;
+                border-style: solid;
+                border-width: 4px;
+                color: black;
+                padding: 15px;
+                text-align: center;
+                display: block;
+                cursor: pointer;
+                font-size: 20px;
+                margin-top: 30px;
+            }
+            #donate p {
+                font-size: 20px;
+                text-align: center;
+                text-decoration: solid;
+                padding: 1em;
+            }
+            .info {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 7;
+                grid-row-end: 7;
+                font-size: 22px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-style: oblique;
+                text-align: left;
+            }
+            #heading {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 8;
+                grid-row-end: 8;
+                font-size: 120%;
+                font-weight: 900;
+                text-align: center;
+                color: blue;
+            }
+            #event1 {
+                margin-top: 40px;
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row-start: 8;
+                grid-row-end: 8;
+                font-size: 115%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bolder;
+            }
+            #event1 img {
+                float: left;
+                width: 40px;
+                height: 40px;
+            }
+            .footer {
+                font-size: 100%;
+                font-weight: 500;
+                text-align: left;
+                text-decoration: underline;
+            }
+            footer a {
+                font-size: 20px;
+                text-decoration: wavy;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="abc">
+        <div id="logo">
+            <div id="pizza1"><img src="https://cdn.pixabay.com/photo/2014/04/02/10/16/fire-303309_960_720.png" alt="no"></div>
+            <p id="pizza">Give Globally</p>
+        </div>
+
+        <div id="hello">
+            <a href="#home" id="hello3">HOME</a>
+            <a href="#Contact" id="hello4">CONTACT</a>
+        </div>
+        <div id="hello1">
+            <a href="#Donation" id="hello5">DONATION</a>
+            <a href="#about" id="hello6">ABOUT</a>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div>HUMANITARIAN RELIEF IN INDIA</div>
+        <div>TRUSTED PROMOTERS</div>
+    </header>
+    <div class="container">
+        <div id="new"><img src="https://dummyimage.com/150x150/d12fd4/ff0004.jpg&text=HELP" alt="check"></div>
+        <div id="support"><img src="https://dummyimage.com/150x150/28c5d6/ff002f.png&text=SUPPORT" alt="check"></div>
+        <div id="design"><img src="https://dummyimage.com/150x150/94cf1f/ff004d.jpg&text=Design" alt="check"></div>
+        <div id="learn"><img src="https://dummyimage.com/150x150/cf301f/ffee00.jpg&text=LEARN" alt="check"></div>
+
+
+    </div>
+
+
+    <section class="grid">
+        <div id="img1">
+            <img src="https://cdn.pixabay.com/photo/2015/11/03/09/14/help-1020249_960_720.jpg" alt="volunters">
+        </div>
+        <div id="img2">
+            <img src="https://cdn.pixabay.com/photo/2020/04/11/15/42/solidarity-5030921_960_720.png" alt="">
+        </div>
+        <div id="img3">
+            <img src="https://cdn.pixabay.com/photo/2015/02/27/18/31/money-652560_960_720.jpg" alt="">
+        </div>
+        <div id="img4">
+            <img src="https://cdn.pixabay.com/photo/2016/12/21/10/10/begging-1922612_960_720.png" alt="">
+
+        </div>
+        <div id="contact">
+            <div id="how">
+                <h1>Disaster Response</h1>
+                <p><img src="https://cdn.pixabay.com/photo/2012/12/06/16/09/silhouette-68870_960_720.jpg" alt="check"> Enable your employees and customers to help others in times of crisis</p>
+                <a href="#" class="button1">LEARN MORE</a>
+            </div>
+            <div id="how1">
+                <h1>Skilled Volunteering</h1>
+                <p><img src="https://cdn.pixabay.com/photo/2016/12/07/08/17/volunteer-1888823_960_720.png" alt="check"> Craft meaninful skilled volunteering experiences that make a difference</p>
+                <a href="#" class="button1">LEARN MORE</a>
+                <p>These are some services.</p>
+            </div>
+        </div>
+        <div id="donate">
+            <img src="https://dummyimage.com/300x300/18a19f/fff200.jpg&text=DONATE+HERE" alt="check">
+            <a href="#DONATE" id="button">CLICK TO DONATE</a>
+            <h1>"Your liitle amount can save life of many"</h1>
+        </div>
+
+
+        <aside class="info">
+            <p>Act locally and think globally is our main mantra to achieve the concept of Atmanirbhar Bharat.</p>
+            <p>We with lead India Foundation assist hundresds of NGOS/SHGS through Financial Inclusion to achieve the global goals and atmanirbhar bharat concept</p>
+
+        </aside>
+
+        <div id="heading">SUPPORT</div>
+        <div id="event1">
+            <p><img src="https://cdn.pixabay.com/photo/2015/04/23/17/28/parenting-736384_960_720.jpg" alt="">NURTURING</p>
+            <p><img src="https://cdn.pixabay.com/photo/2016/12/19/08/39/mobile-phone-1917737_960_720.jpg" alt="check">NETWORKING</p>
+            <p><img src="https://cdn.pixabay.com/photo/2014/09/15/21/01/teddy-bear-447422__340.png" alt="hi">NESTING</p>
+            <p><img src="https://cdn.pixabay.com/photo/2013/07/13/12/43/kids-160168__340.png" alt="no">EDUCATION</p>
+            <p><img src="https://media.istockphoto.com/photos/millennial-people-having-fun-with-singing-eating-pizza-drinking-beers-picture-id1322874985?s=612x612" alt="yes">SOCIALIZING</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>NIMRATPREET KAUR</p>
+        <a href="nkaur211@my.bcit.ca">nkaur211@my.bcit.ca</a>
+    </footer>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
